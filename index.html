@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4d2d68">
+  <meta name="description" content="Una carta especial de S para P">
+  <title>S & P — Nuestra historia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23f5a7bd' d='M32 55S6 40 6 21C6 7 24 4 32 17 40 4 58 7 58 21 58 40 32 55 32 55Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="sky-glow" aria-hidden="true"></div>
+    <div class="fireflies" aria-hidden="true"></div>
+
+    <header class="story-mark" aria-label="S y P">
+      <span>S</span><i>♥</i><span>P</span>
+      <small>cada 27, y todos los días</small>
+    </header>
+
+    <section class="controls" aria-label="Nuestra canción">
+      <button class="music-button" id="musicButton" type="button" aria-pressed="false">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <span class="music-label">Reproducir nuestra canción</span>
+      </button>
+      <div class="equalizer" id="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <button class="envelope" id="envelope" type="button" aria-label="Abrir mi carta para ti" aria-expanded="false">
+      <span class="envelope-back"></span>
+      <span class="letter-peek">Para ti</span>
+      <span class="envelope-front"></span>
+      <span class="envelope-flap"></span>
+      <span class="seal">S·P</span>
+      <span class="hint">Toca la carta</span>
+    </button>
+
+    <div class="letter-overlay" id="letterOverlay" aria-hidden="true">
+      <article class="letter" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+        <button class="close-letter" id="closeLetter" type="button" aria-label="Cerrar la carta">×</button>
+        <p class="letter-date">Nuestro día: cada 27</p>
+        <h1 id="letterTitle">Todo lo que amo de ti</h1>
+        <div class="letter-copy">
+          <p>Amo tu pelo, tu humor, tus dientes chuecos y de vampiro.</p>
+          <p>Tu olor, especialmente cuando no te bañas.</p>
+          <p>Amo cuando te emocionas y se te llenan los ojitos de lágrimas.</p>
+          <p>Amo tu bondad.</p>
+          <p>Tu ombligo.</p>
+          <p>Tu cuello.</p>
+          <p>Amo verte sonreír con esa sonrisa tan linda que haces cuando levantas tus hombros.</p>
+          <p>Justo ahora faltan unas horas para poder verte.</p>
+          <p class="deep">Te amo tanto en lo profundo.</p>
+          <p class="refrain">Te amo tanto.<br>Te amo tanto.<br>Te amo tanto.</p>
+        </div>
+        <footer>Siempre, <strong>S & P</strong></footer>
+      </article>
+    </div>
+
+    <div class="player-shell" id="playerShell" aria-hidden="true">
+      <div id="youtubePlayer"></div>
+    </div>
+    <p class="youtube-note" id="youtubeNote" hidden>Si la música no comienza, ábrela en <a href="https://www.youtube.com/watch?v=17ILK7mjdVI" target="_blank" rel="noopener">YouTube</a>.</p>
+  </main>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
